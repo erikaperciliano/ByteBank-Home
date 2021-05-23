@@ -19,7 +19,13 @@ export default {
       gerentes: []
     }
   },
+  //renderizado tdas as vezes que o componente é executado na tela
   mounted(){
+    if(!this.$store.state.token){
+      console.log('Não pode acessar deslogado!!!');
+      this.$router.push({name: 'login'})
+    }
+
     this.$http.get('gerentes')
       .then(res => this.gerentes = res.data)
       .catch(err => console.log(err))
