@@ -32,7 +32,11 @@ export default {
     methods: {
         efetuarLogin(){
             axios.post('http://localhost:8000/auth/login', this.usuario)
-                .then( res => console.log(res))
+                .then( res => {
+                    console.log(res)
+                    localStorage.setItem('token', res.data.access_token)
+                    this.$router.push({name: 'gerentes'})
+                })
                 .catch(err => console.log(err))
         }
     }
