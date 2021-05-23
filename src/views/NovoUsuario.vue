@@ -30,5 +30,10 @@ export default{
            } 
         }
     },
+    methods: {
+        enviarFormulario () {
+            console.log(this.usuario);
+        }
+    }
 }
 </script>
