@@ -21,14 +21,17 @@ export default {
   },
   //renderizado tdas as vezes que o componente é executado na tela
   mounted(){
-    if(!this.$store.state.token){
-      console.log('Não pode acessar deslogado!!!');
-      this.$router.push({name: 'login'})
-    }
-
     this.$http.get('gerentes')
       .then(res => this.gerentes = res.data)
       .catch(err => console.log(err))
+  },
+  //antes do componente renderizar
+  beforeRouterEnter(to, from, next){
+    if(!this.$store.state.token){
+      console.log('Não pode acessar deslogado!!!');
+      next({name: 'login'})
+    }
+    next()
   }
 }
 </script>
