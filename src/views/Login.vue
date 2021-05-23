@@ -18,20 +18,16 @@
     </div>
 </template>
 <script>
-import axios from 'axios';
-
 export default {
     data() {
         return {
-            usuario: {
-
-            }
+            usuario: {}
         }
     },
 
     methods: {
         efetuarLogin(){
-            axios.post('http://localhost:8000/auth/login', this.usuario)
+            this.$http.post('auth/login', this.usuario)
                 .then( res => {
                     console.log(res)
                     localStorage.setItem('token', res.data.access_token)
