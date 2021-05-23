@@ -22,7 +22,7 @@ import BarraNavegacaoQuandoDeslogado from './BarraNavegacaoQuandoDeslogado';
     },
     computed: {
       usuarioEstaLogado(){
-        return Boolean(localStorage.getItem('token'))
+        return Boolean(this.$store.state.token)
       }
     }
   }
