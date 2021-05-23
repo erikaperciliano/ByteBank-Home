@@ -1,10 +1,10 @@
 # ByteBank 🤑
 
-### This project aims to control user access from registration to login without a backend, in which the security token is obtained to make requests on API security routes.
+### Este projeto visa controlar o acesso do usuário desde o registro até o login sem backend, no qual o token de segurança é obtido para fazer solicitações nas rotas de segurança da API.
 
 
 
-## 🛠 Technology
+## 🛠 Tecnologia
 * Vue JS
 * Vuex
 * Vue-router
@@ -12,25 +12,25 @@
 * Mixins
 * JavaScript
 
-## Project setup ✍️
+## Configuração do projeto ✍️
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compilar e recarregar o projeto 
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Compilar e minimizar para produção
 ```
 npm run build
 ```
 
-### Lints and fixes files
+### Lints 
 ```
 npm run lint
 ```
 
-### Customize configuration
+### Personalize a configuração
 See [Configuration Reference](https://cli.vuejs.org/config/).
