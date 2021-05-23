@@ -33,10 +33,14 @@ export default{
         }
     },
     methods: {
-        enviarFormulario () {
-            axios.post('http://localhost:8000/auth/register', this.usuario)
-                .then(res => console.log(res))
-                .catch(err => console.log(err))
+        enviarFormulario() {
+          axios
+            .post("http://localhost:8000/auth/register", this.usuario)
+            .then(resposta => { 
+                console.log(resposta)
+                this.$router.push({ name: 'login' })
+            })
+            .catch(erro => console.log(erro))
         }
     }
 }
