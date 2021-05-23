@@ -1,18 +1,18 @@
 <template>
     <div class="container"> 
         <h1>Novo Usuário</h1>
-        <form>
+        <form @submit.prevent="enviarFormulario">
             <div class="form-group">
                 <label for="nome">Nome</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" v-model="usuario.nome">
             </div>
             <div class="form-group">
                 <label for="email">E-mail</label>
-                <input type="email" class="form-control">
+                <input type="email" class="form-control" v-model="usuario.email">
             </div>
             <div class="form-group">
                 <label for="senha">Senha</label>
-                <input type="password" class="form-control">
+                <input type="password" class="form-control" v-model="usuario.senha">
             </div>
             <button class="btn btn-primary">Salvar</button>
         </form>
